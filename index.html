@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Gismo V1E:  12/23/2015  - Winter Solstice II
+
+
+    global  gGameStateDict holds id, x,y,dir,speed of all sprites.
+     1) init from json tanks and terrain
+     2) timer drive animation with call to getJsonUpdate which
+        returns id,dir,speed followed by:
+        a) update of gGameState: speed dir
+        b) update of x,y based on speed, dir
+        c) call to drawScreen using gGameState
+
+12/22/2015: V1b:
+    -adds terrain & other tank collision detection = reset speed to 0
+    -arrow keys control direction; N,S,E,W
+    -todo: when tank is transformed based on direction the bounding box
+            remains the same so that CD not always detect hit
+
+-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<input type="button" value="INIT Positions"   onclick="initGameBoard();">
+<input type="button" value="STEP"             onclick="updateGameBoard();">
+<input type="button" value="START Animation"  onclick="startAnimation();">
+<input type="button" value="STOP Animation"   onclick="stopAnimation();">
+
+
+GEAR = <canvas id="reverseShow" width="50" height="20"
+style="border:1px solid #d3d3d3;"></canvas>
+
+SPEED = <canvas id="speedShow" width="30" height="20"
+style="border:1px solid #d3d3d3;"></canvas>
+
+DIR = <canvas id="dirShow" width="30" height="20"
+style="border:1px solid #d3d3d3;"></canvas>
+
+HEALTH = <canvas id="healthShow" width="30" height="20"
+style="border:1px solid #d3d3d3;"></canvas>
+
+
+command : <input type="text" id="cmd" value="<your cmd here>" onchange="handleCmdMsg(this.value)">
+
+<p id="gameover"></p>
+<p id="width"></p>
+
+<svg   id="gameboard"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+>
+  <defs>
+        <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="url(#smallGrid)"/>
+          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/>
+        </pattern>
+ </defs>
+
+ <rect id = "gamerect" width="100%" height="100%" fill="url(#grid)" />
+</svg>
+
+<!-- Need to modify or add when new JS is added or renamed -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+<script src="gismoGeom.js"></script>
+<script src="Gizmo.js"></script>
+<script src="gismoDraw.js"></script>
+
+<!-- Team related: players can provide their own versions -->
+<script src="SquadBravo.js"></script>
+<script src="SquadAlpha.js"></script>
+
+<script src="tankAIAlpha.js"></script>
+<script src="tankAIBravo.js"></script>
+
+
+<script>
+ // startup code can go here
+</script>
+
+<br/>
+
+</body>
+</html>

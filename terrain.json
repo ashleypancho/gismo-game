@@ -1,0 +1,23 @@
+{"terrainList":[
+   {"x":370,      "y":20,      "width":50,      "height":40,      "terrain":"hq1"   },
+
+   {"x":370,      "y":420,      "width":50,      "height":40,      "terrain":"hq2"   },
+   {"x":350,      "y":250,      "width":50,      "height":50,      "terrain":"water"   },
+   {"x":150,      "y":200,      "width":50,      "height":50,      "terrain":"forest"   },
+   {"x":600,      "y":200,      "width":60,      "height":50,      "terrain":"forest"   },
+
+   {"x":720,   "y":100,      "width":100,      "height":200,      "terrain":"mtn"   },
+
+
+   {"x":0,   "y":100,      "width":100,      "height":200,      "terrain":"mtn"   },
+   {"x":100,   "y":200,      "width":50,      "height":100,      "terrain":"mtn"   },
+   {"x":450,   "y":100,      "width":200,      "height":60,      "terrain":"mtn"   },
+   {"x":200,   "y":200,      "width":150,      "height":100,      "terrain":"mtn"   },
+   {"x":400,   "y":200,      "width":200,      "height":100,      "terrain":"mtn"   },
+   {"x":660,   "y":220,      "width":60,      "height":100,      "terrain":"mtn"   },
+   {"x":300,   "y":170,      "width":10,      "height":30,      "terrain":"mtn"   },
+   {"x":500,   "y":160,      "width":10,      "height":30,      "terrain":"mtn"   },
+   {"x":150,   "y":100,      "width":250,      "height":60,      "terrain":"mtn"   }
+
+]
+}
